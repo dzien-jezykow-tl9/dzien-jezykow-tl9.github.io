@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <link rel="shortcut icon" href="https://i.imgur.com/k6ie3Ra.png">
+  <title>Dni językowe - Polska</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+      color: #222;
+    }
+
+    header {
+  background-color: #b40000;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+.back-arrow {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-arrow:hover {
+  background-color: white;
+  color: #b40000;
+  transform: scale(1.1);
+}
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 2rem;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: white;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    h2 {
+      color: #b40000;
+      border-bottom: 2px solid #b40000;
+      padding-bottom: 0.5rem;
+      margin-top: 3rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .card {
+      background: #f7f7f7;
+      padding: 1rem;
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+    }
+
+    .card img {
+  width: 25%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .card:hover img {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #eee;
+      margin-top: 2rem;
+    }
+
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+.mySlides2 {display: none;}
+.mySlides3 {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot2 {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot3 {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+  </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+          <h1>Polska</h1>
+        </div>
+        <nav>
+          <a href="#Historia">Historia</a>
+          <a href="#tradycje">Tradycje</a>
+          <a href="#hymn">Hymn</a>
+          <a href="#jedzenie">Jedzenie</a>
+          <a href="#quiz">Quiz</a>
+        </nav>
+      </header>
+      
+
+  <main>
+    <section id="Historia">
+      <h2>Krótka historia Polski</h2>
+      <div class="grid">
+        <div class="card">
+            <p><div class="slideshow-container">
+<div class="mySlides2 fade">
+  <div class="numbertext">1 / 27</div>
+  <img src="https://wielkahistoria.pl/wp-content/uploads/2020/12/Zaprowadzenie-chrzescijanstwa-Matejko-1194x500.jpg" style="width:100%">
+  <div class="text">966 – Chrzest Polski – Mieszko I przyjmuje chrzest, początek państwowości i chrześcijaństwa w Polsce.</div>
+</div>
+</a>
+<div class="mySlides2 fade">
+  <div class="numbertext">2 / 27</div>
+  <img src="https://s.ciekawostkihistoryczne.pl/uploads/2024/04/Chronica_Polonorum_Coronatio_Boleslaus_Chrabri.png" style="width:100%">
+  <div class="text">1000 – Zjazd gnieźnieński – cesarz Otton III odwiedza Polskę, uznanie państwowości przez Rzeszę.</div>
+</div>
+
+<div class="mySlides2 fade">
+  <div class="numbertext">3 / 27</div>
+  <img src="https://static.prsa.pl/images/e8deeb42-110c-493c-9b9a-dfed03a146b8.jpg" style="width:100%">
+  <div class="text">1025 – Koronacja Bolesława Chrobrego – pierwszy koronowany król Polski.</div>
+</div>
+<div class="mySlides2 fade">
+  <div class="numbertext">4 / 27</div>
+  <img src="https://wielkahistoria.pl/wp-content/uploads/2020/05/Testament-miniatura.jpg" style="width:100%">
+  <div class="text">1138 – Testament Bolesława Krzywoustego – początek rozbicia dzielnicowego.</div>
+</div>
+<div class="mySlides2 fade">
+  <div class="numbertext">5 / 27</div>
+  <img src="https://www.urloplandia.pl/files/gallery/212/Teutonic_order_charge.jpg" style="width:100%">
+  <div class="text">1226 – Sprowadzenie Krzyżaków do Polski przez Konrada Mazowieckiego.</div>
+</div>
+<div class="mySlides2 fade">
+  <div class="numbertext">6 / 27</div>
+  <img src="https://infobusko.pl/?attachment_id=39511" style="width:100%">
+  <div class="text">1320 – Zjednoczenie Królestwa Polskiego przez Władysława Łokietka.</div>
+</div>
+<div class="mySlides2 fade">
+  <div class="numbertext">7 / 27</div>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Union_of_Krewo.jpg/1024px-Union_of_Krewo.jpg" style="width:100%">
+  <div class="text">1385 – Unia w Krewie – unia personalna Polski z Litwą.</div>
+</div>
+<div class="mySlides2 fade">
+  <div class="numbertext">8 / 27</div>
+  <img src="https://obrazyreprodukcje.pl/wp-content/uploads/2020/05/BITWA_POD_GRUNWALDEM_100_x_50.jpg" style="width:100%">
+  <div class="text">1410 – Bitwa pod Grunwaldem – wielkie zwycięstwo nad Zakonem Krzyżackim.</div>
+</div>
+<div class="mySlides2 fade">
+  <div class="numbertext">9 / 27</div>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp7o3nMpHg7-YHDDlLQIoKic00Z_P0AS5WlA&s" style="width:100%">
+  <div class="text">1466 – II pokój toruński – Polska odzyskuje Pomorze Gdańskie, koniec wojny trzynastoletnie</div>
+</div>
+<div class="mySlides2 fade">
+  <div class="numbertext">10 / 27</div>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo-e9ru61vr8jFPsODupltUctoNmYQ07iKng&s" style="width:100%">
+  <div class="text">1569 – Unia lubelska – powstanie Rzeczypospolitej Obojga Narodów.</div>
+</div>
+<div class="mySlides2 fade">
+  <div class="numbertext">11 / 27</div>
+  <img src="https://wiez.pl/wp-content/uploads/2023/02/Jan_Matejko-Batory_pod_Pskowem-1-2-1-1400x1000.jpg" style="width:100%">
+  <div class="text">1573 – Konfederacja warszawska – gwarancja wolności religijnej.</div>
+</div>
+<div class="mySlides2 fade">
+  <div class="numbertext">12 / 27</div>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/King_John_III_Sobieski_Sobieski_sending_Message_of_Victory_to_the_Pope%2C_after_the_Battle_of_Vienna_111.PNG" style="width:100%">
+  <div class="text">1683 – Odsiecz wiedeńska – Jan III Sobieski pokonuje Turków pod Wiedniem.</div>
+</div>
+<div class="mySlides2 fade">
+  <div class="numbertext">13 / 27</div>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfVskSfp3g9mUHbmZtFtsEseUQyXjOd4G31A&s" style="width:100%">
+  <div class="text">1772 – I rozbiór Polski (Rosja, Prusy, Austria).</div>
+</div>
+<div class="mySlides2 fade">
+  <div class="numbertext">14 / 27</div>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Constitution_of_May_3%2C_1791_by_Jan_Matejko.PNG/1280px-Constitution_of_May_3%2C_1791_by_Jan_Matejko.PNG" style="width:100%">
+  <div class="text">1791 – Konstytucja 3 maja – pierwsza konstytucja w Europie.</div>
+</div>
+<div class="mySlides2 fade">
+  <div class="numbertext">15 / 27</div>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Second_Partition_of_Poland_1793.PNG/1280px-Second_Partition_of_Poland_1793.PNG" style="width:100%">
+  <div class="text">1793 – II rozbiór Polski.</div>
+</div>
+<div class="mySlides2 fade">
+  <div class="numbertext">16 / 27</div>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Partitions_of_Poland.png/1280px-Partitions_of_Poland.png" style="width:100%">
+  <div class="text">1795 – III rozbiór Polski – Polska znika z mapy Europy.</div>
+</div>
+<div class="mySlides2 fade">
+  <div class="numbertext">17 / 27</div>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Kossak_Battle_of_Olszynka_Grochowska.jpg/1280px-Kossak_Battle_of_Olszynka_Grochowska.jpg" style="width:100%">
+  <div class="text">1830–1831 – Powstanie listopadowe przeciwko Rosji.</div>
+</div>
+<div class="mySlides2 fade">
+  <div class="numbertext">18 / 27</div>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6Urre__efX19nYh88RG-65hAFNlQsJUQ29g&s" style="width:100%">
+  <div class="text">1863–1864 – Powstanie styczniowe – największe z polskich powstań narodowych.
+ </div>
+</div>
+<div class="mySlides2 fade">
+  <div class="numbertext">19 / 27</div>
+  <img src="https://i.iplsc.com/-/0003MMEWPAE26P0V-C461-F4.jpg" style="width:100%">
+  <div class="text">1918 (11 listopada) – Odzyskanie niepodległości po 123 latach zaborów.</div>
+</div>
+<div class="mySlides2 fade">
+  <div class="numbertext">20 / 27</div>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY3DFvWGbiU8VYTyYPFDBmXhHq4lP6-zCmaQ&s" style="width:100%">
+  <div class="text">1920 – Bitwa warszawska („Cud nad Wisłą”) – zwycięstwo nad Armią Czerwoną.</div>
+</div>
+<div class="mySlides2 fade">
+  <div class="numbertext">21 / 27</div>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvNY1DS3B_NLJ3xFUHOAB0QM84JmNsAbSs-Q&s" style="width:100%">
+  <div class="text">1939 (1 września) – Wybuch II wojny światowej – atak Niemiec na Polskę. </div>
+</div>
+<div class="mySlides2 fade">
+  <div class="numbertext">22 / 27</div>
+  <img src="https://wojsko-polskie.pl/u/8a/b9/8ab95d83-0123-4436-b342-2d64fde78ca7/pobrane.jpg" style="width:100%">
+  <div class="text">1944 – Powstanie warszawskie – zryw Armii Krajowej przeciw Niemcom.</div>
+</div>
+<div class="mySlides2 fade">
+  <div class="numbertext">23 / 27</div>
+  <img src="https://lh4.googleusercontent.com/proxy/1CeTFwuU3eW7k21kn9zd7A3lxSDBx-8ZpAadj2iVXLt_IC7mAw9tD9wqm3p4an10QMrOSf8-Stjg87pYsc5HIJTOuAQEBbNT5VyZo27EWJGA-SytuXutV7JSDJmj1T1muGfBadmwIG_uqX-DbEJD0hCFhG5EhpNz" style="width:100%">
+  <div class="text">1945 – Koniec II wojny światowej, początek rządów komunistycznych.</div>
+</div>
+<div class="mySlides2 fade">
+  <div class="numbertext">24 / 27</div>
+  <img src="https://www.gov.pl/photo/format/79520d58-39cb-443c-9721-2fc8b413d42e/resolution/1408x594" style="width:100%">
+  <div class="text">1980 – Powstanie Solidarności – masowy ruch opozycji.</div>
+</div>
+<div class="mySlides2 fade">
+  <div class="numbertext">25 / 27</div>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3O4yuZvaGahYx9ofnBOqSs5swAdHfGqf95w&s" style="width:100%">
+  <div class="text">1989 – Upadek komunizmu, pierwsze częściowo wolne wybory.</div>
+</div>
+<div class="mySlides2 fade">
+  <div class="numbertext">26 / 27</div>
+  <img src="https://static.polityka.pl/_resource/res/path/03/9a/039a19ea-d5d6-4f89-a4dd-4eedd26b1515_f1400x900" style="width:100%">
+  <div class="text">1999 – Polska wstępuje do NATO.</div>
+</div>
+<div class="mySlides2 fade">
+  <div class="numbertext">27 / 27</div>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShS2Ah8R-sZgUZgWrltu9J15mQOqP7bX45ZQ&s" style="width:100%">
+  <div class="text">2004 – Polska wstępuje do Unii Europejskiej.</div>
+</div>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot2"></span> 
+  <span class="dot2"></span> 
+  <span class="dot2"></span> 
+  <span class="dot2"></span> 
+  <span class="dot2"></span> 
+  <span class="dot2"></span> 
+  <span class="dot2"></span> 
+  <span class="dot2"></span>
+  <span class="dot2"></span> 
+  <span class="dot2"></span> 
+  <span class="dot2"></span> 
+  <span class="dot2"></span>
+  <span class="dot2"></span> 
+  <span class="dot2"></span> 
+  <span class="dot2"></span> 
+  <span class="dot2"></span>
+  <span class="dot2"></span>
+  <span class="dot2"></span>
+  <span class="dot2"></span> 
+  <span class="dot2"></span> 
+  <span class="dot2"></span> 
+  <span class="dot2"></span>
+  <span class="dot2"></span> 
+  <span class="dot2"></span> 
+  <span class="dot2"></span> 
+  <span class="dot2"></span>
+  <span class="dot2"></span>
+</div>
+</div>
+          </div>
+      </div>
+    </section>
+
+    <section id="tradycje">
+      <h2>Tradycje</h2>
+      <div class="grid">
+<div class="card">
+           <div class="slideshow-container">
+<div class="mySlides3 fade">
+  <div class="numbertext">1 / 8</div>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfpeC0TQ-ZXomeBNvrRv3FtFF82rfXgMDJUQ&s" style="width:100%">
+  <div class="text">Marzanna – symboliczne topienie lub palenie kukły Marzanny oznacza pożegnanie zimy i powitanie wiosny.</div>
+</div>
+</a>
+<div class="mySlides3 fade">
+  <div class="numbertext">2 / 8</div>
+  <img src="https://www.radio.bialystok.pl/src/629/ccd17e667ace5080db88026a001de77b" style="width:100%">
+  <div class="text">Niedziela Palmowa – upamiętnia wjazd Jezusa do Jerozolimy; wierni przynoszą do kościoła własnoręcznie wykonane palmy.</div>
+</div>
+
+<div class="mySlides3 fade">
+  <div class="numbertext">3 / 8</div>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm4Oay77CQReJknNke5gKOrnx27S2pHIzy4g&s" style="width:100%">
+  <div class="text">Śmigus-dyngus – ludowy zwyczaj polewania się wodą w Poniedziałek Wielkanocny jako symbol oczyszczenia i wiosennego odrodzenia.</div>
+</div>
+<div class="mySlides3 fade">
+  <div class="numbertext">4 / 8</div>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCvafgOwuDrT0c0DVs7LIBr1VROR3b5ZP_wA&s" style="width:100%">
+  <div class="text">Zielone Świątki – święto kościelne i ludowe obchodzone 50 dni po Wielkanocy, związane z nadejściem lata i urodzajem.</div>
+</div>
+<div class="mySlides3 fade">
+  <div class="numbertext">5 / 8</div>
+  <img src="https://static.topagrar.pl/images/2024/03/27/529635.webp" style="width:100%">
+  <div class="text">Zdobienie jaj (pisanki) – tradycja wielkanocna polegająca na artystycznym ozdabianiu jaj, symbolu życia i odrodzenia.</div>
+</div>
+</a>
+<div class="mySlides3 fade">
+  <div class="numbertext">6 / 8</div>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/%D0%98%D0%B2%D0%B0%D0%BD_%D0%9A%D1%83%D0%BF%D0%B0%D0%BB%D0%B0.%D0%93%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D0%BD%D0%B0_%D0%B2%D0%B5%D0%BD%D0%BA%D0%B0%D1%85.2008.%D0%94%D0%BE%D1%81%D0%BA%D0%B0%2C%D0%BC%D0%B0%D1%81%D0%BB%D0%BE150%D1%8585_%D1%81%D0%BC.jpeg" style="width:100%">
+  <div class="text">Noc świętojańska – pogańskie święto letnie obchodzone w najkrótszą noc roku, pełne ognisk, magii i miłosnych wróżb.</div>
+</div>
+
+<div class="mySlides3 fade">
+  <div class="numbertext">7 / 8</div>
+  <img src="https://magiapodlasia.pl/wp-content/uploads/2023/06/DSC03801-A99S2-2-A99S2_resize.jpg" style="width:100%">
+  <div class="text">Puszczanie wianków – dziewczęta puszczają na wodę wianki z kwiatów, co symbolizuje młodość, miłość i wróżby matrymonialne..</div>
+</div>
+<div class="mySlides3 fade">
+  <div class="numbertext">8 / 8</div>
+  <img src="https://krakowskidomaukcyjny.pl/_upload/galeria/d/borowicki_wladyslaw_orszak_weselny_pod_krakowem_23e59c56.jpg" style="width:100%">
+  <div class="text">Orszak weselny – tradycyjny, barwny pochód gości weselnych z muzyką i śpiewem, często prowadzony do domu panny młodej lub kościoła.
+
+</div>
+</div>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot3"></span> 
+  <span class="dot3"></span> 
+  <span class="dot3"></span> 
+  <span class="dot3"></span> 
+  <span class="dot3"></span> 
+  <span class="dot3"></span> 
+  <span class="dot3"></span> 
+  <span class="dot3"></span> 
+</div>
+</div>
+        </div>
+        
+      </div>
+    </section>
+
+    <section id="hymn">
+        <h2>Hymn</h2>
+        <div class="grid">
+          <a href="https://www.prezydent.pl/storage/file/core_files/2022/11/2/d39ad970f1c2be9a98fa1258dc02a23a/Tekst%20literacki%20hymnu%20pa%C5%84stwowego.pdf" style="text-decoration: none; color: inherit;">
+            <div class="card">
+              <h3>Hymn państwowy Rzeczypospolitej Polskiej „Mazurek Dąbrowskiego”
+                <br>
+                słowa: Józef Wybicki, 1797 r.</h3>
+                <h4>
+                  <p>
+                  Jeszcze Polska nie zginęła,<br>
+                  Kiedy my żyjemy.<br>
+                  Co nam obca przemoc wzięła,<br>
+                  Szablą odbierzemy.<br>
+                  </p>
+                  <p>
+                  Marsz, marsz Dąbrowski,<br>
+                  Z ziemi włoskiej do Polski.<br>
+                  Za twoim przewodem<br>
+                  Złączym się z narodem.<br>
+                  </p>
+                  <p>
+                  Przejdziem Wisłę, przejdziem Wartę,<br>
+                  Będziem Polakami.<br>
+                  Dał nam przykład Bonaparte,<br>
+                  Jak zwyciężać mamy.<br>
+                  </p>
+                  <p>
+                  Marsz, marsz ...<br>
+                  </p>
+                  <p>
+                  Jak Czarniecki do Poznania<br>
+                  Po szwedzkim zaborze,<br>
+                  Dla ojczyzny ratowania<br>
+                  Wrócim się przez morze.<br>
+                  </p>
+                  <p>
+                  Marsz, marsz ...<br>
+                  </p>
+                  <p>
+                  Już tam ojciec do swej Basi<br>
+                  Mówi zapłakany –<br>
+                  Słuchaj jeno, pono nasi<br>
+                  Biją w tarabany.<br>
+                  </p>
+                  <p>
+                  Marsz, marsz ...<br>
+                </p>
+              </h4>
+            </div>
+          </a>
+          <a href="https://www.youtube.com/embed/Gkmt-FBnlWg?si=Xw99upMpu7c7ykgb" style="text-decoration: none; color: inherit;">
+          <div class="card">
+            <p><div style="text-align: center;">
+  <iframe width="560" 
+          height="315" 
+          src="https://www.youtube.com/embed/Gkmt-FBnlWg?si=Xw99upMpu7c7ykgb" 
+          title="Hymn Polski" 
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" 
+          allowfullscreen>
+  </iframe>
+</div>
+</p>
+          </div>
+          </a>
+        </div>
+      </section>
+      <section id="jedzenie">
+        <h2>Jedzenie</h2>
+        <div class="grid">
+            <div class="card"><h3>
+              Poniżej zamieszczamy jedzenie jakie posiadamy na naszym stanowisku:<br>
+              </h3>
+              <div class="slideshow-container">
+<a href="salatka_jarzynowa.html">
+<div class="mySlides fade">
+  <div class="numbertext">1 / 4</div>
+  <img src="https://imgur.com/uRMLBx8.jpg" style="width:100%">
+  <div class="text">Sałatka jarzynowa</div>
+</div>
+</a>
+<div class="mySlides fade">
+  <div class="numbertext">2 / 4</div>
+  <img src="https://i.imgur.com/k6ie3Ra.png" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 4</div>
+  <img src="https://i.imgur.com/k6ie3Ra.png" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">4 / 4</div>
+  <img src="https://i.imgur.com/k6ie3Ra.png" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+</div>
+          </a>
+        </div>
+      </section>
+       <section id="quiz">
+        <h2>Quiz</h2>
+        <div class="grid">
+          <a href="https://www.prezydent.pl/storage/file/core_files/2022/11/2/d39ad970f1c2be9a98fa1258dc02a23a/Tekst%20literacki%20hymnu%20pa%C5%84stwowego.pdf" style="text-decoration: none; color: inherit;">
+            <div class="card">
+              <h4>Sprawdź swoją wiedzę o Polsce w Quzie wiedzy o Polsce. Przewidzana drobna nagroda niespodzianka.</h4><br>
+              <center>
+                >>Kliknij, aby wziąść udział<<
+              </center>
+              </div>
+              </a>
+              </div>
+              </section>
+  </main>
+
+  <script>
+    console.log("na chuj sie tu patrzysz");
+// Slideshow 1
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 5000);
+}
+
+
+// Slideshow 2
+let slideIndex2 = 0;
+showSlides2();
+
+function showSlides2() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides2");
+  let dots = document.getElementsByClassName("dot2");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex2++;
+  if (slideIndex2 > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex2-1].style.display = "block";  
+  dots[slideIndex2-1].className += " active";
+  setTimeout(showSlides2, 5000);
+}
+
+// Slideshow 3
+let slideIndex3 = 0;
+showSlides3();
+
+function showSlides3() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides3");
+  let dots = document.getElementsByClassName("dot3");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex3++;
+  if (slideIndex3 > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex3-1].style.display = "block";  
+  dots[slideIndex3-1].className += " active";
+  setTimeout(showSlides3, 5000);
+}
+
+
+</script>
+</body>
+</html>
