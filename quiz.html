@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
+  <style>
+
+    input[type="radio"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #555;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+}
+
+
+input[type="radio"]:checked {
+  border-color: #ff0000;
+  background-color: #ff0000;
+}
+
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      color: #c00;
+      padding: 0;
+      margin: 0;
+    }
+    header {
+      background-color: #c00;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    main {
+      padding: 20px;
+    }
+    .question {
+      background: #f9f9f9;
+      border-left: 5px solid #c00;
+      margin: 20px 0;
+      padding: 15px;
+      border-radius: 5px;
+    }
+    .question h3 {
+      margin-bottom: 10px;
+    }
+    button {
+      background-color: #c00;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 20px;
+      cursor: pointer;
+      font-size: 1em;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #900;
+    }
+    #resultModal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    #resultContent {
+      background: white;
+      color: #c00;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    .circle {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .circle div {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      margin: 5px;
+      background-color: gray;
+    }
+    .correct {
+      background-color: green !important;
+    }
+    .incorrect {
+      background-color: red !important;
+    }
+    @media screen and (max-width: 600px) {
+      main {
+        padding: 10px;
+      }
+      .question h3 {
+        font-size: 1em;
+      }
+      button {
+        width: 100%;
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>POLSKA</header>
+  <main>
+    <h1>Quiz 20 Pytaniowy</h1>
+    <h3>Aby dostać nagrodę należy zdobyć minimum 75% poprawnych odpowiedzi</h3>
+    <form id="quizForm"></form>
+    <button onclick="submitQuiz()">Zakończ quiz</button>
+  </main>
+
+  <div id="resultModal">
+    <div id="resultContent">
+      <h2>Twój wynik: <span id="score"></span>%</h2>
+      <div class="circle" id="circleResult"></div>
+    </div>
+  </div>
+
+  <script>
+    const hashAnswers = ["Yg==", "Yw==", "Yw==", "Yg==", "Yw==", "Yw==", "YQ==", "Yw==", "YQ==", "Yw==", "Yg==", "Yg==", "YQ==", "YQ==", "YQ==", "Yg==", "Yw==", "Yg==", "Yg==", "Yg=="];
+    const questions = [
+      {
+        question: 'W którym roku uchwalono Konstytucję 3 maja?',
+        options: ['1787', '1791', '1807', '1795']
+      },
+      {
+        question: 'Jak nazywa się najwyższy szczyt Polski?',
+        options: ['Giewont', 'Kasprowy Wierch', 'Rysy', 'Śnieżka']
+      },
+      {
+        question: 'Ile województw ma Polska?',
+        options: ['12', '18', '16', '14']
+      },
+      {
+        question: 'Jakie jest największe jezioro w Polsce?',
+        options: ['Mamry', 'Śniardwy', 'Wigry', 'Hańcza']
+      },
+      {
+        question: 'Który polski poeta otrzymał Nagrodę Nobla?',
+        options: ['Adam Mickiewicz', 'Julian Tuwim', 'Czesław Miłosz', 'Zbigniew Herbert']
+      },
+      {
+        question: 'Jak nazywa się polska wyspa na Bałtyku?',
+        options: ['Bornholm', 'Uznam', 'Wolin', 'Rügen']
+      },
+      {
+        question: 'Kto był pierwszym prezydentem III Rzeczypospolitej?',
+        options: ['Lech Wałęsa', 'Ryszard Kaczorowski', 'Wojciech Jaruzelski', 'Bronisław Komorowski']
+      },
+      {
+        question: 'Jak nazywa się najdłuższa rzeka w Polsce?',
+        options: ['Odra', 'Bug', 'Wisła', 'Warta']
+      },
+      {
+        question: 'Kto był autorem „Lalki”?',
+        options: ['Bolesław Prus', 'Henryk Sienkiewicz', 'Stefan Żeromski', 'Stanisław Wyspiański']
+      },
+      {
+        question: 'Jakie pasmo górskie znajduje się w południowo-wschodniej Polsce?',
+        options: ['Tatry', 'Karkonosze', 'Bieszczady', 'Sudety']
+      },
+      {
+        question: 'Jakie były dokładne granice Polski w czasie panowania Bolesława Chrobrego w 1025 roku?',
+        options: ['Tylko Małopolska i Wielkopolska', 'Od Bałtyku po Karpaty i od Odry po Dniepr', 'Tylko ziemie Wielkopolski i Pomorza', 'Od Morza Bałtyckiego do Sudetów']
+      },
+      {
+        question: 'Kto i kiedy formalnie zatwierdził Konstytucję 3 maja?',
+        options: ['Sejm Czteroletni w 1791 roku', 'Król Stanisław August Poniatowski i Sejm w 1791 roku', 'Sejm Wielki w 1789 roku', 'Sejm Czteroletni w 1793 roku']
+      },
+      {
+        question: 'Jakie były skutki gospodarcze i społeczne kolonizacji olęderskiej?',
+        options: ['Wprowadzenie nowych technik rolniczych i rozwój osadnictwa na terenach podmokłych', 'Upadek gospodarki rolnej i migracja ludności', 'Zlikwidowanie własności szlacheckiej', 'Rozwój przemysłu ciężkiego']
+      },
+      {
+        question: 'Kiedy Polska utraciła dostęp do Morza Bałtyckiego przed odzyskaniem go w 1918 roku?',
+        options: ['W 1308 roku po zajęciu Pomorza przez Krzyżaków', 'W 1454 roku podczas wojny trzynastoletniej', 'W 1772 roku podczas I rozbioru Polski', ' W 1795 roku podczas III rozbioru Polski']
+      },
+      {
+        question: 'Kto był autorem projektu ustawy o sejmikach ziemskich z 1791 roku?',
+        options: ['Hugo Kołłątaj', 'Stanisław Małachowski', 'Ignacy Potocki', 'Tadeusz Kościuszko']
+      },
+      {
+        question: 'W jaki sposób system liberum veto wpływał na funkcjonowanie parlamentu Rzeczypospolitej?',
+        options: ['Umożliwiał szybkie uchwalanie ustaw', 'Pozwalał każdemu posłowi zablokować decyzję sejmu', ' Wzmacniał władzę króla nad sejmem', 'Ograniczał władzę szlachty']
+      },
+      {
+        question: 'Jakie było znaczenie i przebieg bitwy pod Grunwaldem?',
+        options: [' Zwycięstwo Krzyżaków nad Polakami i Litwinami', 'Klęska wojsk polsko-litewskich, zakończona kapitulacją Krakowa', 'Zwycięstwo wojsk polsko-litewskich nad Zakonem Krzyżackim w 1410 roku', 'Bitwa miała miejsce podczas wojny polsko-tureckiej']
+      },
+      {
+        question: 'Jaki był wkład polskich naukowców w rozwój techniki międzywojennej?',
+        options: ['Brak znaczących osiągnięć', 'Rozwój lotnictwa, inżynierii i odkryć medycznych', 'Głównie prace literackie i filozoficzne', 'Opracowanie broni jądrowej']
+      },
+      {
+        question: 'Które wydarzenie nie należało do powstania warszawskiego?',
+        options: ['Rozpoczęcie walk 1 sierpnia 1944', ' Zdobycie przez powstańców Pałacu Kultury i Nauki', 'Zniszczenie dużej części miasta przez Niemców', 'Pomoc Armii Czerwonej zatrzymującej się na prawym brzegu Wisły']
+      },
+      {
+        question: 'Jak zmieniała się rola Polski w okresie zimnej wojny?',
+        options: ['Polska była członkiem NATO od początku zimnej wojny', 'Była państwem satelickim ZSRR z ograniczoną suwerennością', 'Polska była neutralna i nie należała do żadnego bloku', 'Polska prowadziła politykę sojuszu z Chinami']
+      }
+    ];
+
+    const quizForm = document.getElementById('quizForm');
+    questions.forEach((q, i) => {
+      const div = document.createElement('div');
+      div.className = 'question';
+      div.innerHTML = `
+        <h3>${q.question}</h3>
+        ${q.options.map((opt, j) => `
+          <label>
+            <input type="radio" name="q${i}" value="${j}"> ${opt}
+          </label><br>
+        `).join('')}
+      `;
+      quizForm.appendChild(div);
+    });
+
+    function submitQuiz() {
+  const userAnswers = questions.map((_, i) => {
+    const selected = document.querySelector(`input[name="q${i}"]:checked`);
+    return selected ? selected.value : null;
+  });
+
+  let score = 0;
+  const circleResult = document.getElementById('circleResult');
+  circleResult.innerHTML = '';
+
+  userAnswers.forEach((ans, i) => {
+    const resultDot = document.createElement('div');
+    if (ans === null) {
+      resultDot.className = 'incorrect';
+    } else {
+      const userHash = btoa(String.fromCharCode(97 + parseInt(ans)));
+      if (userHash === hashAnswers[i]) {
+        score++;
+        resultDot.className = 'correct';
+      } else {
+        resultDot.className = 'incorrect';
+      }
+    }
+    circleResult.appendChild(resultDot);
+  });
+
+  document.getElementById('score').innerText = Math.round((score / questions.length) * 100);
+  document.getElementById('resultModal').style.display = 'flex';
+}
+
+  </script>
+</body>
+</html>
